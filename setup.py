@@ -6,7 +6,7 @@ with open('README.rst') as file:
 
 setup(
     name='amplitude-sdk',
-    version='0.0.6',
+    version='0.0.1',
     description='Amplitude Python 3 SDK.',
     packages=find_packages(),
     keywords=(
