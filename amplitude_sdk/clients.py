@@ -87,7 +87,8 @@ class BehavioralCohortsClient(object):
             diff = (datetime.today() - start).seconds
             time.sleep(20)
         url = f'{self.endpoint}/5/cohorts/request/{request_id}/file'
-        r = requests.get(url, allow_redirects=True, headers=b._get_headers())
+        r = requests.get(
+            url, allow_redirects=True, headers=self._get_headers())
         open(local_path, 'wb').write(r.content)
 
     def create_cohorts(self, name, user_ids, owner, id_type='BY_USER_ID'):
